@@ -33,7 +33,7 @@ geth --datadir qdata/dd --password passwords.txt account new
 
 echo "[*] Starting Geth Node"
 
-ARGS="--nodiscover --syncmode full --mine --rpc --rpcaddr $(hostname -I | xargs) --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul"
+ARGS="--nodiscover --syncmode full --mine --rpc --rpcaddr $(hostname -I | xargs) --networkid 2017 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul"
 
 PRIVATE_CONFIG=./qdata/c/tm.ipc nohup geth --datadir qdata/dd $ARGS --rpcport 22000 --port 21000 2>>qdata/logs/geth.log &
 
