@@ -12,7 +12,7 @@
 
 ## 3. Run consecutive nodes
 
-` docker run -d -e OTHER_NODES_PARAM=--othernodes=http://{ip_of_bootnode_docker}:10000/ --name quorum_node{i} quorum_node`
+` docker run -d -e OTHER_NODES_PARAM="--othernodes=http://{ip_of_bootnode_docker}:10000/" --name quorum_node{i} quorum_node`
 * Additionally you can specify port mapping using -p e.g. -p 8545:22000
 
 ## 4. Add consecutive nodes to the network
